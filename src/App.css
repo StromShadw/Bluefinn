@@ -2,3 +2,16 @@
     margin: 0;
     padding: 0;
 }
+.business-entities{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px;
+}
+.business-entities .title{
+    color: white;
+    margin: 10px;
+    margin-left: 0px;
+}

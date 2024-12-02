@@ -7,10 +7,10 @@ function App() {
   return (
     <>
     <Header/>
-    <div>
-      <img src="./logo.png" alt="" />
-      <a href=""></a>
-      <h5>98</h5>
+    <div className='business-entities'>
+      <img className='logo' src="./logo.png" alt="LOGO" />
+      <a className='title' href="#">Business Entities</a>
+      <h5 className='total'>98</h5>
     </div>
     </>
   )
