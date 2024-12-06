@@ -1,15 +1,17 @@
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+import { AiOutlineCalendar, AiOutlineDashboard, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock,AiOutlineControl } from 'react-icons/ai';
+import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart,FiFilter  } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
+import { GoOrganization } from 'react-icons/go';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { MdOutlineSupervisorAccount,MdOutlinePolicy,MdReportGmailerrorred } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
 import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
+import { CgDanger } from "react-icons/cg";
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
@@ -474,49 +476,78 @@ export const links = [
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        name: 'Dashboard',
+        icon: <AiOutlineDashboard />,
       },
     ],
   },
 
   {
-    title: 'Pages',
+    title: 'Organization',
     links: [
       {
-        name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        name: 'Bussiness Entities',
+        icon: <GoOrganization />,
       },
       {
-        name: 'employees',
+        name: 'Application',
         icon: <IoMdContacts />,
       },
       {
         name: 'customers',
         icon: <RiContactsLine />,
       },
+      {
+        name: 'Policy',
+        icon: <MdOutlinePolicy />,
+      },
+      {
+        name: 'Issue',
+        icon: <CgDanger />,
+      },
+      {
+        name: 'Controls',
+        icon: <AiOutlineControl />,
+      },
     ],
   },
   {
-    title: 'Apps',
+    title: 'Data Import',
     links: [
       {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
+        name: 'Bussiness Entities',
+        icon: <GoOrganization />,
       },
       {
-        name: 'kanban',
-        icon: <BsKanban />,
+        name: 'Application',
+        icon: <IoMdContacts />,
       },
       {
-        name: 'editor',
-        icon: <FiEdit />,
+        name: 'Policy',
+        icon: <MdOutlinePolicy />,
       },
       {
-        name: 'color-picker',
-        icon: <BiColorFill />,
+        name: 'Issue',
+        icon: <CgDanger />,
+      },
+      {
+        name: 'Controls',
+        icon: <AiOutlineControl />,
       },
     ],
+  },
+  {
+    title:"Report Data",
+    links:[
+      {
+        name:"Report",
+        icon:<MdReportGmailerrorred />,
+      },
+      {
+        name:"Filer Data",
+        icon:<FiFilter />,
+      }
+    ]
   },
   {
     title: 'Charts',
@@ -5871,7 +5902,3 @@ export const PyramidData = [
   { x: 'Fruits', y: 520, text: '520 cal' },
   { x: 'Bread, Rice, Pasta', y: 930, text: '930 cal' },
 ];
-{
-  paresh
-  
-}
