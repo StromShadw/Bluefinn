@@ -25,7 +25,7 @@ class SparkLine extends React.PureComponent {
         markerSettings={{ visible: ['All'], size: 2.5, fill: currentColor }}
         dataSource={data}
         xName="x"
-        yName="y"
+        yName="yval"
         type={type}
       >
         <Inject services={[SparklineTooltip]} />
