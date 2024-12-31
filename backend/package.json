@@ -2,20 +2,25 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "module",
   "description": "demo practice backend for bluefinn project",
   "author": "Paresh Esave",
   "license": "ISC",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
   },
   "keywords": [
     "javascript",
     "backend"
   ],
   "dependencies": {
-    "backend": "file:"
+    "backend": "file:",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2"
   }
 }
