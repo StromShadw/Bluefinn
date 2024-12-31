@@ -2,14 +2,20 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "start": "nodemon server.js"
-  },
-  "author": "",
+  "description": "demo practice backend for bluefinn project",
+  "author": "Paresh Esave",
   "license": "ISC",
-  "description": "",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
   "dependencies": {
     "backend": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
