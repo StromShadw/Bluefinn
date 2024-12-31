@@ -4,17 +4,13 @@
   "main": "server.js",
   "type": "module",
   "description": "demo practice backend for bluefinn project",
-  "author": "Paresh Esave",
-  "license": "ISC",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
-  "keywords": [
-    "javascript",
-    "backend"
-  ],
   "dependencies": {
     "backend": "file:",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.3"
@@ -22,5 +18,11 @@
   "devDependencies": {
     "nodemon": "^3.1.9",
     "prettier": "^3.4.2"
-  }
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Paresh Esave",
+  "license": "ISC"
 }
