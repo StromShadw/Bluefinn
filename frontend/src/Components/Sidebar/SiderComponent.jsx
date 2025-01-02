@@ -13,7 +13,7 @@ function SiderComponent() {
   return (
     <Sider
       className={`sidebar transition-all duration-100
-        ${darkTheme ? "bg-[#0988ff] text-white" : "bg-white text-black"}`}
+        ${darkTheme ? "bg-[#0988ff] text-white" : "bg-[#8C52FF] text-black"}`}
       collapsed={collapsed}
       collapsible
       trigger={null}
@@ -23,19 +23,20 @@ function SiderComponent() {
     >
       <div
       onClick={() => setCollapsed(!collapsed)}
-        className={`flex items-center justify-center p-3
-          ${darkTheme ? "bg-[#001529]" : "bg-[#004293]"}`}
+        className={`flex items-center justify-center
+          ${collapsed ? "p-3" : ""}
+          ${darkTheme ? "bg-black" : "bg-[#8C52FF]"}`}
       >
+        <NavLink to="/"><Logo collapsed={collapsed} /></NavLink>
         <Button
           type="text"
-          className={`text-lg transition-all duration-100 ml-4 
-          ${collapsed ? "ml-9" : ""} 
-          ${darkTheme ? "text-white hover:!text-white" : "text-white hover:!text-white"}
-          hover:!bg-opacity-20`}
+          className={`text-lg transition-all duration-100 ml-10 bg-black
+          ${collapsed ? "mr-12" : ""} 
+          ${darkTheme ? "text-white hover:!text-white" : "text-white hover:!text-black"}
+          `}
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           onClick={() => setCollapsed(!collapsed)}
         />
-        <NavLink to="/"><Logo collapsed={collapsed} /></NavLink>
       </div>
       <MenuList collapsed={collapsed} />
     </Sider>

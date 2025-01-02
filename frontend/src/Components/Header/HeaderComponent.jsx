@@ -5,23 +5,29 @@ import { FaPowerOff, FaBinoculars, FaHome } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { BsQuestionLg } from "react-icons/bs";
 import { useTheme } from "../../Context/ThemeContext";
-import ToggleThemeButton from "../ToggleThemeButton";
-import sideLogo from "../../assets/sidelogo.png";
 import { NavLink } from "react-router-dom";
 import { RiCheckboxCircleFill } from "react-icons/ri";
-// import { useGlobalContext } from "../../Context/GlobalState";
+import { useGlobalContext } from "../../Context/GlobalState";
 import { PiMonitorFill } from "react-icons/pi";
+import ToggleThemeButton from "../ToggleThemeButton";
+import profile from "../../assets/a-1.png";
+import sideLogo from "../../assets/sidelogo.png";  
 
 const { Header } = Layout;
 
 function HeaderComponent() {
   const { darkTheme, toggleTheme } = useTheme();
-  // const {  } = useGlobalContext();
+  const { user } = useGlobalContext();
 
   // Profile menu items
   const profileMenu = (
     <Menu>
-      <Menu.Item key="4">John Doe</Menu.Item>
+      <Menu.Item key="4" className="border-b">
+        <div className="flex items-center gap-1">
+        <img src={profile} alt="profile" width={25}/>
+        {user? user.name :"User Name"}
+        </div>
+      </Menu.Item>
       <Menu.Item key="1" icon={<CgProfile />}>
         <NavLink to="/login">Profile Setting</NavLink>
       </Menu.Item>
@@ -57,23 +63,10 @@ function HeaderComponent() {
 
   return (
     <Header
-      className={`flex justify-between p-3 transition-colors duration-300 h-14 ${
-        darkTheme ? "bg-[#001F54] text-white" : "bg-[#004293] text-black"
+      className={`flex justify-end p-3 transition-colors duration-300 h-14 ${
+        darkTheme ? "bg-black text-white" : "bg-[#8C52FF] text-black"
       }`}
     >
-      <div className="flex items-center space-x-2">
-        <img src={sideLogo} alt="BC in the cloud" className="h-8" />
-        <span className="font-semibold text-lg text-white">
-          BC in the cloud
-        </span>
-        <Dropdown overlay={appMenu} trigger={["click"]}>
-          <button className="flex items-center space-x-2">
-            <span className="text-xl text-white">
-              <IoAppsSharp />
-            </span>
-          </button>
-        </Dropdown>
-      </div>
       <div className="flex items-center space-x-3">
         <ToggleThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
         <button className="text-md rounded-full bg-white text-black p-2 hover:bg-gray-200 dark:bg-[#333] dark:text-white">
@@ -87,8 +80,9 @@ function HeaderComponent() {
         </button>
         {/* Dropdown for profile */}
         <Dropdown overlay={profileMenu} trigger={["click"]}>
-          <button className="rounded-full bg-white text-black p-2 hover:bg-gray-200 dark:bg-[#333] dark:text-white">
-            <CgProfile />
+          <button className="rounded-full bg-white text-black p-1 hover:bg-gray-200 dark:bg-[#333] dark:text-white">
+            {/* <CgProfile /> */}
+            <img src={sideLogo} alt="profile" width={20}/>
           </button>
         </Dropdown>
       </div>

@@ -17,10 +17,10 @@ function AppContent() {
 
   return (
     <Layout
-      className={`min-h-screen ${darkTheme ? "bg-gray-900" : "bg-white"}`}
+      className={`min-h-screen ${darkTheme ? "bg-[#FF914D]" : "bg-white"}`}
     >
       <SiderComponent />
-      <Layout className="dark:bg-dark">
+      <Layout className="dark:bg-[#8C52FF]">
         <HeaderComponent />
         <Layout.Content>
           <Routes>
@@ -31,8 +31,8 @@ function AppContent() {
             />
             <Route path="/employees" element={<Employees />} />
             <Route path="/locations" element={<Location />} />
-            <Route path="/location-types" element={<LocationType />} />
-            <Route path="/training" element={<TrainingAwareness />} />
+            <Route path="/location-type" element={<LocationType />} />
+            <Route path="/training-awareness" element={<TrainingAwareness />} />
             <Route path="/" element={<SomeComponent />} />
           </Routes>
         </Layout.Content>

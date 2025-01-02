@@ -92,7 +92,7 @@ const MenuList = () => {
         title={
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-500 font-bold hover:text-primaryDark" : ""
+              isActive ? "text-blue-500 font-bold border-l-red-600 " : ""
             }
             to="/organization"
           >

@@ -20,8 +20,18 @@ const SomeComponent = () => {
       {user ? (
         <p>Welcome, {user.name}</p>
       ) : (
-        <button onClick={handleLogin}>Login</button>
+        <button 
+        onClick={handleLogin}
+        className="mt-2 rounded-md bg-blue-500 text-white px-2 py-1"> 
+          Login
+        </button>
       )}
+      <br />
+      <button 
+      onClick={() => setUser(null)}
+      className="mt-2 rounded-md bg-red-500 text-white px-2 py-1">
+        Logout
+      </button>
     </div>
   );
 };

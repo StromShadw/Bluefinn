@@ -6,7 +6,7 @@ import { BiColumns } from "react-icons/bi";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { TiExport } from "react-icons/ti";
 import { HiDotsHorizontal } from "react-icons/hi";
-import FlowChart from "../../../Components/FlowChart";
+// import Map from "../../../Components/Map/Map";
 // import Login from "../../loginPage/Login";
 
 const BusinessEntitiesPage = () => {
@@ -118,7 +118,7 @@ const BusinessEntitiesPage = () => {
         </div>
       </div>
       {/* <Login/> */}
-      <FlowChart/>
+      {/* <Map/> */}
     </div>
   );
 };

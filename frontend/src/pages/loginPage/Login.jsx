@@ -1,6 +1,7 @@
 import { IoPerson } from "react-icons/io5";
 import { TbLockPassword } from "react-icons/tb";
 import Logo from "../../assets/logo.png";
+import { Navigate } from "react-router-dom";
 
 function Login() {
   return (
@@ -30,7 +31,7 @@ function Login() {
           </div>
 
           <div className="flex justify-center mb-6">
-            <button className="bg-teal-600 text-white px-24 py-2 rounded-lg text-lg font-semibold cursor-pointer hover:bg-teal-700">
+            <button className="bg-teal-600 text-white px-24 py-2 rounded-lg text-lg font-semibold cursor-pointer hover:bg-teal-700" type="submit" onClick={()=>Navigate("/business-entities")}>
               Login
             </button>
           </div>
