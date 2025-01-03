@@ -1,7 +1,7 @@
-import { useGlobalContext } from "../Context/GlobalState";
+import { useGlobalState } from "../Context/GlobalState";
 
 const SomeComponent = () => {
-  const { loading, user, error, setLoading, setUser } = useGlobalContext();
+  const { loading, user, error, setLoading, setUser } = useGlobalState();
 
   // Example usage of the global context values and functions
   const handleLogin = () => {

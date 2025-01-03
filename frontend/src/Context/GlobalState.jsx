@@ -1,19 +1,19 @@
 import { createContext, useContext, useState } from "react";
 
 // Create the context
-const GlobalContext = createContext();
+const GlobalStateContext = createContext();
 
 // Custom hook to use the global context
-export const useGlobalContext = () => useContext(GlobalContext);
+export const useGlobalState = () => useContext(GlobalStateContext);
 
 // Provider component
-export const GlobalProvider = ({ children }) => {
-  // Define your global states here
+export const GlobalStateProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [avatar, setAvatar] = useState("https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png");
 
-  // Values to be provided to children
   const value = {
     loading,
     setLoading,
@@ -21,12 +21,15 @@ export const GlobalProvider = ({ children }) => {
     setUser,
     error,
     setError,
-    // Add more state and functions as needed
+    isAuthenticated,
+    setIsAuthenticated,
+    avatar,
+    setAvatar,
   };
 
   return (
-    <GlobalContext.Provider value={value}>
-      {children} {/* This allows nested components to access the context */}
-    </GlobalContext.Provider>
-  )
+    <GlobalStateContext.Provider value={value}>
+      {children}
+    </GlobalStateContext.Provider>
+  );
 };

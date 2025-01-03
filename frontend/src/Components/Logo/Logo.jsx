@@ -1,5 +1,5 @@
-import logo from "../../assets/logo.jpg";
-import grayLogo from "../../assets/gray-logo.jpg";
+import logo from "../../assets/Logo_Transparent.png";
+// import grayLogo from "../../assets/gray-logo.jpg";
 import { useTheme } from '../../Context/ThemeContext';
 
 const Logo = () => {
@@ -11,10 +11,8 @@ const Logo = () => {
     >
       {!collapsed && (
         <img
-          className={`h-auto w-15 transition-all ease-in-out duration-300 ${
-            darkTheme ? "" : "bg-white rounded-sm"
-          }`}
-          src={`${darkTheme ? grayLogo : logo}`}
+          className={`h-auto  transition-all ease-in-out duration-300`}
+          src={logo}
           alt="Logo"
         />
       )}

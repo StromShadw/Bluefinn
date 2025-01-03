@@ -1,8 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
+.ant-menu-submenu-title {
+  color: #ffffff !important;
+  font-weight: 600;
 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+.ant-menu-item {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
 
 .menu-bar::-webkit-scrollbar {
     width: 2px !important; 

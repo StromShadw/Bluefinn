@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from 'react-helmet';
 import { AiFillTool } from "react-icons/ai";
 import { FaHome, FaFilter } from "react-icons/fa";
 import { LuRefreshCw } from "react-icons/lu";
@@ -16,6 +17,12 @@ const BusinessEntitiesPage = () => {
     setIsOpen(!isOpen);
   };
   return (
+    <>
+    <Helmet>
+        <title>Business Entities Page | TRST</title>
+        <meta name="description" content="This is the home page description" />
+        <meta name="keywords" content="home, react, meta tags" />
+    </Helmet>
     <div className="pb-3 relative px-2">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
@@ -120,6 +127,7 @@ const BusinessEntitiesPage = () => {
       {/* <Login/> */}
       {/* <Map/> */}
     </div>
+    </>
   );
 };
 
