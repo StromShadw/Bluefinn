@@ -5,6 +5,7 @@ import fileUpload from 'express-fileupload';
 
 const app = express();
 
+//Middlewares
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true
@@ -18,14 +19,13 @@ app.use(express.urlencoded({
 }))
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(fileUpload({
-    useTempFiles:true,
-}))
 
-app.get('/',(req,res)=>{
-    res.json({msg:'welcome to the TRST world'})
-})
-app.use('/user', require('./routers/userRouter.js'))
 
+//Routes import
+import userRouter from './routes/user.routes.js';
+
+
+//Routes declaration
+app.use('/api/v1/users', userRouter);
 
 export { app };
