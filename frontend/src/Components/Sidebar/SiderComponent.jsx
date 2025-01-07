@@ -22,7 +22,7 @@ function SiderComponent() {
       collapsedWidth="80"
       onBreakpoint={(broken) => setCollapsed(broken)}
     >
-      <div className={`flex items-center justify-center p-1 ${darkTheme ? "bg-white" : "bg-[#8C52FF]"} ${collapsed ? "h-[56px]" : "h-[56px]"}`}>
+      <div className={`flex items-center justify-center p-1 border-b ${darkTheme ? "bg-white" : "bg-[#FF914D]"} ${collapsed ? "h-[56px]" : "h-[56px]"}`}>
         <img src={Logo} alt="logo" width={100} />
         {/* <Logo/> */}
       </div>

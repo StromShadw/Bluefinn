@@ -85,7 +85,7 @@ const PageHeader = ({name,dropdownName}) => {
       </button>
     </div>
     <div className="flex items-center">
-      <button className="relative border border-orange-500 bg-orange-500 text-white px-5 py-2 rounded shadow-md flex items-center">
+      <button className="relative border bg-slate-700 text-white px-5 py-2 rounded shadow-md flex items-center">
         <span className="absolute inset-y-3 left-0.5 w-3 h-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"

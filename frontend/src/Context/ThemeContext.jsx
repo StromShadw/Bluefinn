@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 
 // Create a provider component
 export const ThemeProvider = ({ children }) => {
-  const [darkTheme, setDarkTheme] = useState(true); // Dark theme state
+  const [darkTheme, setDarkTheme] = useState(false); // Dark theme state
   const [collapsed, setCollapsed] = useState(false); // Collapsed state for sidebar
 
   const toggleTheme = () => {

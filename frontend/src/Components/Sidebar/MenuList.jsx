@@ -18,8 +18,6 @@ import {
   TbSquareRoundedLetterWFilled,
   TbSquareRoundedLetterMFilled,
   TbSquareRoundedLetterDFilled,
-  TbSquareRoundedLetterBFilled,
-  TbSquareRoundedLetterTFilled,
   TbCircleLetterBFilled,
 } from "react-icons/tb";
 import { useTheme } from "../../Context/ThemeContext";
@@ -91,15 +89,15 @@ const MenuList = () => {
       label: <NavLink to="/organization">Organization</NavLink>,
       children: [
         {
-          key: "business-entities",
+          key: "business-entities1",
           label: <NavLink to="/business-entities">Business Entities</NavLink>,
         },
         {
-          key: "employees",
+          key: "employees1",
           label: <NavLink to="/employees">Employees</NavLink>,
         },
         {
-          key: "locations",
+          key: "locations1",
           label: <NavLink to="/locations">Locations</NavLink>,
         },
         {
@@ -132,7 +130,7 @@ const MenuList = () => {
           ),
         },
         {
-          key: "equipment",
+          key: "equipment1",
           label: <NavLink to="/equipment">Equipment</NavLink>,
         },
         {
@@ -141,7 +139,7 @@ const MenuList = () => {
         },
         { key: "supplies", label: <NavLink to="/supplies">Supplies</NavLink> },
         {
-          key: "vendors",
+          key: "vendors1",
           label: "Vendors",
         },
         {
@@ -156,59 +154,47 @@ const MenuList = () => {
       label: "BIA",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "approval-groups1",
+          label: <NavLink to="/approval-groups">Approval Groups</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
+          key: "bia-dashboard",
+          label: <NavLink to="/bia-dashboard">BIA Dashboard</NavLink>,
         },
         {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
-        },
-        {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
-        },
-        {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "activities",
+          label: <NavLink to="/activities">Activities</NavLink>,
         },
       ],
     },
     {
-      key: "plans",
+      key: "plans1",
       icon: <GiBlackBook />,
       label: "Plans",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "approval-groups2",
+          label: <NavLink to="/approval-groups">Approval Groups</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
+          key: "attachments",
+          label: <NavLink to="/attachments">Attachments</NavLink>,
         },
         {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
+          key: "call-tree",
+          label: <NavLink to="/call-tree">Call Trees</NavLink>,
         },
         {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
+          key: "plans2",
+          label: <NavLink to="/plans">Plans</NavLink>,
         },
         {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
+          key: "sections",
+          label: <NavLink to="/sections">Sections</NavLink>,
         },
         {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "teams1",
+          label: <NavLink to="/teams">Teams</NavLink>,
         },
       ],
     },
@@ -218,28 +204,16 @@ const MenuList = () => {
       label: "Risks",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "risk-assessments",
+          label: <NavLink to="/risk-assessments">Risk Assessments</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
+          key: "risk-register",
+          label: <NavLink to="/risk-register">Risk Register</NavLink>,
         },
         {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
-        },
-        {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
-        },
-        {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "threat",
+          label: <NavLink to="/threat">Threat</NavLink>,
         },
       ],
     },
@@ -249,28 +223,8 @@ const MenuList = () => {
       label: "Exercises",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
-        },
-        {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
-        },
-        {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
-        },
-        {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
-        },
-        {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "exercises-issues",
+          label: <NavLink to="/exercises-issues">Exercises Issues</NavLink>,
         },
       ],
     },
@@ -280,28 +234,12 @@ const MenuList = () => {
       label: "Incidents",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "active-incidents",
+          label: <NavLink to="/active-incidents">Active Incidents</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
-        },
-        {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
-        },
-        {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
-        },
-        {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "incidents-map",
+          label: <NavLink to="/incidents-map">Incidents Map</NavLink>,
         },
       ],
     },
@@ -311,28 +249,20 @@ const MenuList = () => {
       label: "Business",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "action-items1",
+          label: <NavLink to="/Action Items">action-items</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
+          key: "bia1",
+          label: <NavLink to="/bia">BIA</NavLink>,
         },
         {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
+          key: "plans4",
+          label: <NavLink to="/plans">Plans</NavLink>,
         },
         {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
-        },
-        {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "processes1",
+          label: <NavLink to="/processes">Processes</NavLink>,
         },
       ],
     },
@@ -342,28 +272,24 @@ const MenuList = () => {
       label: "Technology",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "action-items2",
+          label: <NavLink to="/action-items">Action Items</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
+          key: "applications1",
+          label: <NavLink to="/applications">Applications</NavLink>,
         },
         {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
+          key: "databases1",
+          label: <NavLink to="/databases">Databases</NavLink>,
         },
         {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
+          key: "hardware1",
+          label: <NavLink to="/hardware">Hardware</NavLink>,
         },
         {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "plans3",
+          label: <NavLink to="/plans">Plans</NavLink>,
         },
       ],
     },
@@ -373,28 +299,24 @@ const MenuList = () => {
       label: "Dashboard",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
+          key: "bia-dashboard1",
+          label: <NavLink to="/bia-dashboard">BIA Dashboard</NavLink>,
         },
         {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
+          key: "disaster-recovery-dashboard1",
+          label: <NavLink to="/disaster-recovery-dashboard">Disaster Recovery Dashboard</NavLink>,
         },
         {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
+          key: "incident-dashboard",
+          label: <NavLink to="/incident-dashboard">Incident Dashboard</NavLink>,
         },
         {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
+          key: "plan-dashboard1",
+          label: <NavLink to="/plan-dashboard">Plan Dashboard</NavLink>,
         },
         {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "risk-dashboard1",
+          label: <NavLink to="/risk-dashboard">Risk Dashboard</NavLink>,
         },
       ],
     },
@@ -404,28 +326,8 @@ const MenuList = () => {
       label: "Reports",
       children: [
         {
-          key: "business-entities",
-          label: <NavLink to="/business-entities">Business Entities</NavLink>,
-        },
-        {
-          key: "employees",
-          label: <NavLink to="/employees">Employees</NavLink>,
-        },
-        {
-          key: "locations",
-          label: <NavLink to="/locations">Locations</NavLink>,
-        },
-        {
-          key: "location-map",
-          label: <NavLink to="/location-map">Location Map</NavLink>,
-        },
-        {
-          key: "location-type",
-          label: <NavLink to="/location-type">Location Type</NavLink>,
-        },
-        {
-          key: "training-awareness",
-          label: <NavLink to="/training-awareness">Training Awareness</NavLink>,
+          key: "new-reports",
+          label: <NavLink to="/new-reports">New Reports</NavLink>,
         },
       ],
     },
@@ -456,7 +358,37 @@ const MenuList = () => {
     },
     { key: "BIA Dependencies", 
       icon: <TbCircleLetterBFilled />, 
-      label: "BIA Dependencies" 
+      label: "BIA Dependencies",
+      children: [
+        {
+          key: "activity-department-dependencies",
+          label: <NavLink to="/activity-department-dependencies">Activity - Department Dependencies</NavLink>,
+        },
+        {
+          key: "bcm-seats",
+          label: <NavLink to="/bcm-seats">BCM Seats</NavLink>,
+        },
+        {
+          key: "required-applications",
+          label: <NavLink to="/required-applications">Required Applications</NavLink>,
+        },
+        {
+          key: "bcp-action-plans",
+          label: <NavLink to="/bcp-action-plans">BCP Action Plans</NavLink>,
+        },
+        {
+          key: "process-dependency",
+          label: <NavLink to="/process-dependency">Process Dependency</NavLink>,
+        },
+        {
+          key: "process-vendor",
+          label: <NavLink to="/process-vendor">Process Vendor</NavLink>,
+        },
+        {
+          key: "process-equipment",
+          label: <NavLink to="/process-equipment">Process Equipment</NavLink>,
+        },
+      ],
     },
     { key: "BIA Equipment Dependencys", 
       icon: <TbCircleLetterBFilled />, 
@@ -491,7 +423,7 @@ const MenuList = () => {
     <Menu
       theme={darkTheme ? "dark" : "light"}
       className={`menu-bar overflow-y-auto overflow-x-hidden max-h-[calc(100vh-54px)] scrollbar-thin scrollbar-thumb-primary-200 scrollbar-track-primary-100 ${
-        darkTheme ? "bg-[#FF914D]" : "bg-[#808080]"
+        darkTheme ? "bg-[#FF914D]" : "bg-[#8C52FF]"
       }`}
       mode="inline"
       items={menuItems}
