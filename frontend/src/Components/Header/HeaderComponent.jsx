@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Button } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 const { Header } = Layout;
 

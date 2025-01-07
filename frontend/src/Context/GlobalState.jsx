@@ -28,7 +28,7 @@ export const GlobalStateProvider = ({ children }) => {
   useEffect(() => {
     // If the token doesn't exist, try to refresh it
     const firstLogin = localStorage.getItem("accessToken");
-    console.log("First login cookie:", firstLogin);
+    // console.log("First login cookie:", firstLogin);
     if (firstLogin) {
       setLoading(true);
     } else {

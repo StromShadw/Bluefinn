@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+// import { useGlobalState } from "../Context/GlobalState.jsx";
 
 const UserAPI = (token) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
-
+    // const {setUser,setAvatar} = useGlobalState()
     useEffect(() => {
         if (token) {
             const getUser = async () => {
                 try {
-                    console.log("Token received in UserAPI:", token);
+                    // console.log("Token received in UserAPI:", token);
 
                     const res = await axios.get(
                         "http://localhost:8000/api/v1/users/current-user",
@@ -23,7 +24,11 @@ const UserAPI = (token) => {
 
                     setIsLoggedIn(true);
                     setIsAdmin(res.data.role === "admin");
-                    console.log("User info fetched successfully:", res.data);
+                    // console.log("User info fetched successfully:", res.data);
+                    // setUser(res.data)
+                    // console.log(user);
+                    // setAvatar(res.data.avatar)
+                    // console.log(avatar);                   
                 } catch (err) {
                     console.error("Failed to fetch user information:", {
                         message: err.message,
@@ -32,7 +37,7 @@ const UserAPI = (token) => {
                     });
                 }
             };
-            console.log(isLoggedIn);  
+            // console.log(isLoggedIn); 
             getUser();
         }
     }, [token,isLoggedIn]);

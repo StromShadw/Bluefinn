@@ -33,6 +33,8 @@ const Login = () => {
   
       const { user, accessToken, refreshToken } = response.data.data;
   
+      console.log(user);
+      
       // Save tokens in localStorage
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("refreshToken", refreshToken);
