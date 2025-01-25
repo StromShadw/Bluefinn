@@ -22,7 +22,10 @@ const { Header } = Layout;
 function HeaderComponent() {
   const { darkTheme, toggleTheme, collapsed, setCollapsed } = useTheme();
   const navigate = useNavigate();
-  const { user, setIsAuthenticated, avatar } = useGlobalState();
+  const { setIsAuthenticated } = useGlobalState();
+
+  const userName = localStorage.getItem("userName");
+  const avatar = localStorage.getItem("avatar");
 
   const handleLogout = async () => {
     try {
@@ -31,9 +34,10 @@ function HeaderComponent() {
         {},
         { withCredentials: true } // Send cookies with the request
       );
-      localStorage.clear();
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("refreshToken");
+      localStorage.clear()
+      // localStorage.removeItem("refreshToken");
+      // localStorage.removeItem("userName");
+      // localStorage.removeItem("avatar");
       setIsAuthenticated(false); // Clear user state
       navigate("/login"); // Redirect to login page
     } catch (error) {
@@ -49,7 +53,7 @@ function HeaderComponent() {
         label: (
           <div className="flex items-center gap-1">
             <img src={avatar} alt="profile" width={25} />
-            {user}
+            {userName}
           </div>
         ),
         className: 'border-b',
@@ -76,7 +80,7 @@ function HeaderComponent() {
   return (
     <Header
       className={`flex justify-between p-3 transition-colors duration-300 h-14 ${
-        darkTheme ? "bg-white text-white" : "bg-[#FF914D] text-black"
+        darkTheme ? "bg-[#8C52FF] text-white" : "bg-[#FF914D] text-black"
       }`}
     >
       <div className="flex items-center">

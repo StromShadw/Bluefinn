@@ -3,31 +3,22 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
 
-.ant-menu-submenu-title {
-  color: #ffffff !important;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-}
-.ant-menu-item {
-  color: #ffffff !important;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-}
+/* * {
+  font-family: 'Sen', 'Montserrat', 'sans-serif';
+} */
 
+/* Custom scrollbar for dark mode */
 .menu-bar::-webkit-scrollbar {
   width: 2px !important;
-  height: 10px !important;
 }
 
 .menu-bar::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #555;  /* Darker thumb color */
   border-radius: 2px;
 }
 
 .menu-bar::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #222;  /* Darker thumb hover color */
 }
 
 .menu-bar::-webkit-scrollbar-track {
@@ -35,46 +26,8 @@
   border-radius: 4px;
 }
 
-.ant-menu-item-selected {
-  background-color: #ffffff !important; /* Change the background color */
-  color: #000000 !important;          /* Change the text color */
-}
 
-/* .ant-menu-item:hover {
-  background-color: #5400fc !important; // Change hover background color 
-  color: #ffffff !important;            // Change hover text color
-} */
-
-/* Change sidebar background color */
-.ant-layout-sider {
-  background-color: #8C52FF !important; /* Replace with your desired orange color */
-}
-
-/* Collapsed sidebar menu item text and icon color */
-.ant-layout-sider-collapsed .ant-menu-item {
-  color: #ffffff !important; /* Change to your desired color (e.g., black) */
-}
-
-/* Optional: Adjust the hover styles as well */
-.ant-layout-sider-collapsed .ant-menu-item:hover {
-  background-color: #8C52FF !important; /* Hover background color */
-  color: #FFFFFF !important;           /* Hover text and icon color */
-}
-
-/* Change the icon color when not hovered */
-.ant-layout-sider-collapsed .ant-menu-item .anticon {
-  color: #ffffff !important; /* Icon color */
-}
-
-
-/* Hover state for menu items */
-.custom-menu .ant-menu-item:hover {
-  background-color: #8C52FF !important; /* Hover background color */
-  color: var(--menu-hover-color) !important; /* Hover text color */
-}
-
-/* Active/Selected menu item */
-.custom-menu .ant-menu-item-selected {
-  background-color: #8C52FF !important; /* Active background color */
-  color: var(--menu-active-color) !important; /* Active text color */
+/* Global font family */
+* {
+  font-family: 'Sen', 'Montserrat', 'sans-serif';
 }

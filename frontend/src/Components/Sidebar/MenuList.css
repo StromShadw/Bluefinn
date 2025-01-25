@@ -1,0 +1,45 @@
+/* Global styles for dark mode on menu items */
+.ant-menu-item {
+  color: #000000 !important;
+  font-weight: 600;
+  font-family:"sans-serif";
+  font-size: 14px;
+}
+
+/* Submenu item text */
+.ant-menu-submenu-title {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-family: "sans-serif";
+  font-size: 14px;
+}
+
+/* Active selected item color */
+.ant-menu-item-selected {
+  background-color: #ff914d !important; /* Active item color */
+  color: #ffffff !important; /* White text color */
+}
+
+/* Dark Mode specific styles */
+.ant-menu-item {
+  color: #ffffff !important; /* Light text color for dark theme */
+}
+
+.ant-menu-item-selected {
+  background-color: rgb(0, 86, 214) !important; /* Active item color */
+}
+
+.ant-menu-item:hover {
+  background-color: #5400fc !important; /* Hover background for light/dark mode */
+  color: #ffffff !important; /* White text on hover */
+}
+
+/* Sidebar background color for dark mode */
+/* .ant-layout-sider {
+    background-color: #f50000 !important; Dark background
+  } */
+
+/* Menu vertical background for dark mode */
+.ant-menu-vertical {
+  background-color: #8c52ff !important; /* Dark background for vertical menu */
+}

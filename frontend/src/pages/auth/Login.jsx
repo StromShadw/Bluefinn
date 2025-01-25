@@ -7,55 +7,62 @@ import "react-toastify/dist/ReactToastify.css";
 import Cookies from "js-cookie";
 
 const Login = () => {
-  const { setIsAuthenticated, setAvatar, setUser, token: [,setToken] } = useGlobalState();
+  const {
+    setIsAuthenticated,
+    setAvatar,
+    setUser,
+    token: [, setToken],
+  } = useGlobalState();
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     const username = e.target.username.value.trim();
     const password = e.target.password.value.trim();
-  
+
     if (!username || !password) {
       toast.error("Please enter both username and password.");
       return;
     }
-  
+
     setLoading(true);
-  
+
     try {
       const response = await axios.post(
         "http://localhost:8000/api/v1/users/login",
         { username, password },
         { withCredentials: true }
       );
-  
+
       console.log("Login response data:", response.data); // Debugging API response
-  
+
       const { user, accessToken, refreshToken } = response.data.data;
-  
+
       console.log(user);
-      
+
       // Save tokens in localStorage
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("refreshToken", refreshToken);
 
       // Setting the cookies
-      Cookies.set(accessToken);
-      Cookies.set(refreshToken);
-  
+      Cookies.set("accessToken", accessToken);
+      Cookies.set("refreshToken", refreshToken);
+
       // Update global state
+      localStorage.setItem("userName", user.username);
       setUser(user.username);
       console.log("User set to:", user.username);
-  
+
+      localStorage.setItem("avatar", user.avatar);
       setAvatar(user.avatar);
       console.log("Avatar set to:", user.avatar);
-  
+
       setIsAuthenticated(true);
       console.log("Authentication status set to true.");
-  
+
       setToken(accessToken);
       console.log("Access token set in global state.");
-  
+
       toast.success("Login successful!");
     } catch (error) {
       console.error("Login error:", error.response || error.message || error);
@@ -66,7 +73,6 @@ const Login = () => {
       setLoading(false);
     }
   };
-  
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-purple-600 to-orange-400">

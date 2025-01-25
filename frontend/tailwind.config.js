@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from "tailwindcss/defaultTheme";
+// import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mont: ["var(--font-mont)", ...fontFamily.sans],
+        heading: ['Century Gothic', 'sans-serif'], // Century Gothic Bold
+        subheading: ['Cambria', 'serif'], // Cambria Bold
+        body: ['Avenir', 'Montserrat', 'sans-serif'], // Avenir (fallback to Montserrat)
       },
+      fontWeight: {
+        heading: 700, // Bold for Century Gothic
+        subheading: 700, // Bold for Cambria
+        body: 400, // Regular for Avenir or Montserrat
+      },      
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
